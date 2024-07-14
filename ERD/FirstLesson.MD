@@ -38,5 +38,4 @@ Source{Upstream Process or System} -> *[ODS]* -> *[Staging]* -> Current System -
 *Attributes*: Also known as column(s) are one aspect of information that defines the Entity. Like "Number of Doors" for an Entity named Cars or Brand Name, or Price. 
 
 ### Types of Entities
-[[../ERD/Types-of-Entities.png]]
-
+<img src="../ERD/Types-of-Entities.png">
