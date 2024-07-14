@@ -1,4 +1,4 @@
-#ERD
+# ERD
 
 Key terminologies to remember
 1. ERD: Entity Relationship Diagram
