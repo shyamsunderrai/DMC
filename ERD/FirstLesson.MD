@@ -39,3 +39,24 @@ Source{Upstream Process or System} -> *[ODS]* -> *[Staging]* -> Current System -
 
 ### Types of Entities
 <img src="../ERD/Types-of-Entities.png">
+
+*Strong* Entity: Any entity that is independent and does not have a dependency. Employee, Product, Customer are examples of Strong entity, in a ER Diagram, these are denoted by a rectangular box
+
+*Weak* Entity: Entities that are dependent on *Strong* entitie(s), for instance, Sales depends on customers and cars, Dependents depends on Employee. These are denoted by twin rectangles witone inside another. 
+
+*Associative* Entitye: Is a derived attribute from different entities which have a relationship. For instance, Project and Employee are two strong entities. Project.ID and Project.Name can be associated with Employee.ID and Employee.Name. As, an employee can be assigned a Project, there is an association_ID. A new type of entity can contain all this information like
+  - Employee.ID
+  - Employee.Name
+  - Project.ID
+  - Project.Name
+  - Association.ID
+
+  Associative entity are represented by a triangle within the rectangle. 
+
+
+
+## Type of Attributes
+
+<img src="../ERD/Types-of-Attributes.png">
+
+
