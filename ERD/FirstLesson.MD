@@ -97,3 +97,12 @@ There are 6 types of cardinalities
 
 
 
+## Relationship(s)
+
+Similar to a verb depicting/specifying relationship between two entities. Strong relationship is depicted by a single Rhombus and Weak relationship is denoted by Double Rhombus
+<img src="../ERD/Relationship.png">
+
+A relationship between two strong entities, like *Student* enrolling to a *Course* is a strong relationship, however, an *Employee* registering *Dependents* is weak relationship as *Dependent* is Weak entity and relies on employees for its existence
+
+<img src="../ERD/Relationship-explained.png">
+
