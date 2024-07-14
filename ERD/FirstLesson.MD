@@ -59,4 +59,12 @@ Source{Upstream Process or System} -> *[ODS]* -> *[Staging]* -> Current System -
 
 <img src="../ERD/Types-of-Attributes.png">
 
+#### Attribute Symbols
+Attribute symbols, much like attribute themselves, define the characteristics of each attributes
+- Circle and understore, denotes a primary key and independent attribute
+- Cirle, denotes an independent attribute
+- Two circles, one inside another denotes multiple values for one attribute, like two mobile numbers for one customer
+- Dotted Circle is derived attribute, for instance *Age* is calculated by subtracting current_time minus DOB for the customer
 
+
+<img src="../ERD/Attributes-Symbols.png">
