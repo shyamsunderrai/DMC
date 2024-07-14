@@ -68,3 +68,32 @@ Attribute symbols, much like attribute themselves, define the characteristics of
 
 
 <img src="../ERD/Attributes-Symbols.png">
+
+
+
+
+## Cardinality
+Number of instances within one entity which can be related to instance within another entity. The are six categories, here is a snapshot that shows these cardinalities altogether.
+<img src="../ERD/Types-Cardinality.png">
+
+There are 6 types of cardinalities
+1. Zero-to-One: One employee, one License number. Since an employee can have either one or ZERO license
+<img src="../ERD/Cardinality-zero-to-one.png">
+
+2. One-to-many: One Department, Many Employees.
+<img src="../ERD/Cardinality-one-to-many.png">
+
+3. One: One employee, one passport
+<img src="../ERD/Cardinality-One.png">
+
+4. One-to-only-one: Each employee can only be given ONLY one quarters
+<img src="../ERD/Cardinality-One-to-only-one.png">
+
+5. Zero-or-many: Employee can have zero dependents or many
+<img src="../ERD/Cardinality-Zero-or-many.png">
+
+6. One-or-many: Can have at least one or many accounts (savings, EPF, current)
+<img src="../ERD/Cardinality-One-or-many.png">
+
+
+
