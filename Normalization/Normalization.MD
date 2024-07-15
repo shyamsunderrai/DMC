@@ -22,6 +22,16 @@ For instance, if a monolith table is broken down into multiple entities based on
    | 2         | John      | Kennedy    | 07/05/2022 | ~~Project-1, Project-2~~ |
    | 3         | Abe       | Lincon     | 07/04/2000 | Project-3            |
 
+   Based on the above observation, Project-1 and Project-2 for *Emp No* 2 is non-atomic. Lets fix that
+   | Emp No    | FirstName | LastName   | HireDate   | Project              |
+   | :---      |    :----: | :----:     | :----:     |  ---:                |
+   | 1         | Thomas    | Jefferson  | 07/04/2024 | Project-1            |
+   | 2         | John      | Kennedy    | 07/05/2022 | Project-1            |
+   | 2         | John      | Kennedy    | 07/05/2022 | Project-2            |
+   | 3         | Abe       | Lincon     | 07/04/2000 | Project-3            |
+   
+   All other columns are duplicate for *Emp No* 2, however, now he has unique information for two separate Projects he was associated with
+
 .. Should always contain similar data
 .. Name of a column should always be distinct
 2. 2NF
