@@ -19,7 +19,7 @@ For instance, if a monolith table is broken down into multiple entities based on
    | Emp No    | FirstName | LastName   | HireDate   | Project              |
    | :---      |    :----: | :----:     | :----:     |  ---:                |
    | 1         | Thomas    | Jefferson  | 07/04/2024 | Project-1            |
-   | 2         | John      | Kennedy    | 07/05/2022 | Project-1, Project-2 | &#9746;
+   | 2         | John      | Kennedy    | 07/05/2022 | Project-1, Project-2 | ![X symbol](https://github.com/shyamsunderrai/DMC/tree/main/Normalization/Normalization-1nf-xmark.png)
    | 3         | Abe       | Lincon     | 07/04/2000 | Project-3            |
 
 .. Should always contain similar data
