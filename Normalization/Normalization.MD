@@ -34,14 +34,22 @@ For instance, if a monolith table is broken down into multiple entities based on
    All other columns are duplicate for *Emp No* 2, however, now he has unique information for two separate Projects he was associated with.
    *Now* there is another problem with this representation i.e. HireDate has *Project-3* and Project column has "07/04/2000" as values. This conflicts with the principle of columns having       similar data. Lets fix that.
 
-   | Emp No    | Name |Name   | HireDate   | Project              |
+   | Emp No    | ~~Name~~ | ~~Name~~   | HireDate   | Project               |
    | :---      |    :----: | :----:     | :----:     |  ---:                |
    | 1         | Thomas    | Jefferson  | 07/04/2024 | Project-1            |
    | 2         | John      | Kennedy    | 07/05/2022 | Project-1            |
    | 2         | John      | Kennedy    | 07/05/2022 | Project-2            |
    | 3         | Abe       | Lincon     | 07/04/2000 | Project-3            |
    
+   Above looks alright, however, fails the third characteristic of an attribute, each column must be unique. Lets fix this.
 
+   | Emp No    | First Name| Last Name  | HireDate   | Project               |
+   | :---      |    :----: | :----:     | :----:     |  ---:                |
+   | 1         | Thomas    | Jefferson  | 07/04/2024 | Project-1            |
+   | 2         | John      | Kennedy    | 07/05/2022 | Project-1            |
+   | 2         | John      | Kennedy    | 07/05/2022 | Project-2            |
+   | 3         | Abe       | Lincon     | 07/04/2000 | Project-3            |
+   
 .. Should always contain similar data
 .. Name of a column should always be distinct
 2. 2NF
