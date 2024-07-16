@@ -9,10 +9,11 @@
 
 ```mermaid
 graph TD;
-    Data-Owner-->Data_Stewards_1;
-    Data-Owner-->Data_Stewards_2;
-    Data-Owner-->Data_Stewards_n; 
-    Data_Stewards_1-->Data_Controllers_x1;
-    Data_Stewards_2-->Data_Controllers_a1;
-    Data_Stewards_n-->Data_Controllers_e1;
+    Data-Owner-->|Delegation|-->Data_Stewards_1;
+    Data-Owner-->|Delegation|-->Data_Stewards_2;
+    Data-Owner-->|Delegation|-->Data_Stewards_n; 
+    Data_Stewards_1-->|DataEnablers|-->Data_Controllers_x1;
+    Data_Stewards_2-->|DataEnablers|-->Data_Controllers_a1;
+    Data_Stewards_n-->|DataEnablers|-->Data_Controllers_e1;
+
 ```
