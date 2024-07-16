@@ -14,7 +14,7 @@ For instance, if a monolith table is broken down into multiple entities based on
 
 
 ## Types of Normalization
-1. 1NF
+####1. 1NF
 .. A single column should hold single value for each row (atomic)
    | Emp No    | Name | Name   | HireDate   | Project              |
    | :---      |    :----: | :----:     | :----:     |  ---:                |
@@ -54,10 +54,10 @@ For instance, if a monolith table is broken down into multiple entities based on
 .. Name of a column should always be distinct
 
 
-2. 2NF
-.. There are two main traits for 2NF these are 
-... It should have all the traits of 1NF
-... Column(s) should not have partial dependency
+#### 2. 2NF
+##### There are two main traits for 2NF these are 
+1. It should have all the traits of 1NF
+2. Column(s) should not have partial dependency
 
 Lets look at an example 
    | Emp No    | Project   | Allocation | ProjectName|
@@ -85,10 +85,39 @@ In this example, we can see that EMP(1) + Project(P1) constitute a composite key
    | P3        | Banking    |
    
 
+#### 3. 3NF
+##### Again, two main traits for 3NF
+1. Should always be in the 2NF form
+2. Should not have any *transitive dependency*
+
+Lets look at an example 
+   | Emp No    | Name    | Dept_no    | Location   |
+   | :---      |  :----: | :----:     | ----:      | 
+   | 1         | Adam    | D10        | Delhi      |
+   | 2         | Jason   | D05        | Mumbai     |
+   | 2         | Michael | D19        | Chennai    |
+   | 3         | George  | D11        | Hyderabad  |
+
+In these columns, *Emp No* has a direct relation with *Dept_no* and *Dept_no* has a direct relation/dependency with *Location*. This is not allowed in 3NF, hence, to fox this, it can be normalized as the following entities:
+
+Employee
+   | Emp No    | Name    | Dept_no |
+   | :---      |  :----: | ----:   | 
+   | 1         | Adam    | D10     |
+   | 2         | Jason   | D05     |
+   | 2         | Michael | D19     |
+   | 3         | George  | D11     |
+
+Departments
+   | Dept_no    | Location   |
+   | :---      |  ----:      | 
+   | D10        | Delhi      |
+   | D05        | Mumbai     |
+   | D19        | Chennai    |
+   | D11        | Hyderabad  |
 
 
 
-3. 3NF
 4. 4NF
 5. 5NF
 
