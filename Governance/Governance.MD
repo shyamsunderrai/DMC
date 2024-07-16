@@ -13,12 +13,6 @@ graph TD;
     Data-Owner-->Data_Stewards_2;
     Data-Owner-->Data_Stewards_n; 
     Data_Stewards_1-->Data_Controllers_x1;
-    Data_Stewards_1-->Data_Controllers_y1;
-    Data_Stewards_1-->Data_Controllers_z1;
     Data_Stewards_2-->Data_Controllers_a1;
-    Data_Stewards_2-->Data_Controllers_b1;
-    Data_Stewards_2-->Data_Controllers_c1;
     Data_Stewards_n-->Data_Controllers_e1;
-    Data_Stewards_n-->Data_Controllers_f1;
-    Data_Stewards_n-->Data_Controllers_g1;
 ```
