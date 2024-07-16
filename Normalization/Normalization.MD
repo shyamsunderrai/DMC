@@ -53,6 +53,19 @@ For instance, if a monolith table is broken down into multiple entities based on
 .. Should always contain similar data
 .. Name of a column should always be distinct
 2. 2NF
+.. There are two main traits for 2NF these are 
+... It should have all the traits of 1NF
+... Column(s) should not have partial dependency
+
+Lets look at an example 
+   | Emp No    | Project   | Allocation | ProjectName|
+   | :---      |  :----:   | :----:     | ----:      | 
+   | 1         | P1        | 100        | Insurance  |
+   | 2         | P2        |  25        | Mortgage   |
+   | 2         | P3        |  75        | Banking    |
+   | 3         | P1        | 100        | Insurance  |
+
+
 3. 3NF
 4. 4NF
 5. 5NF
