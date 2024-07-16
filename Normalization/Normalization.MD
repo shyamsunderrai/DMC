@@ -52,6 +52,8 @@ For instance, if a monolith table is broken down into multiple entities based on
    
 .. Should always contain similar data
 .. Name of a column should always be distinct
+
+
 2. 2NF
 .. There are two main traits for 2NF these are 
 ... It should have all the traits of 1NF
@@ -64,6 +66,26 @@ Lets look at an example
    | 2         | P2        |  25        | Mortgage   |
    | 2         | P3        |  75        | Banking    |
    | 3         | P1        | 100        | Insurance  |
+
+In this example, we can see that EMP(1) + Project(P1) constitute a composite key, as they are unique when combined. Same goes for all the values within these two columns. And, column ProjectName depends on these columns. This is against 2NF, hence, this should be restructured and corrected or Normalized into two entities. 
+
+*Employee*
+   | Emp No    | Project   | Allocation |
+   | :---      |  :----:   | ---- :     | 
+   | 1         | P1        | 100        |
+   | 2         | P2        |  25        |
+   | 2         | P3        |  75        |
+   | 3         | P1        | 100        |
+
+*Projects* Now the partial dependency of ProjectName column has been removed from the main table
+   | Project   | ProjectName|
+   | :---      | ----:      | 
+   | P1        | Insurance  |
+   | P2        | Mortgage   |
+   | P3        | Banking    |
+   
+
+
 
 
 3. 3NF
