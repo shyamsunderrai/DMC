@@ -98,7 +98,7 @@ Lets look at an example
    | 2         | Michael | D19        | Chennai    |
    | 3         | George  | D11        | Hyderabad  |
 
-In these columns, *Emp No* has a direct relation with *Dept_no* and *Dept_no* has a direct relation/dependency with *Location*. This is not allowed in 3NF, hence, to fox this, it can be normalized as the following entities:
+In these columns, *Emp No* has a direct relation with *Dept_no* and *Dept_no* has a direct relation/dependency with *Location*. Here, there is a transitive dependency between Employee Number -> Dept_no -> Location. This is not allowed in 3NF, hence, to fox this, it can be normalized as the following entities:
 
 Employee
    | Emp No    | Name    | Dept_no |
@@ -117,8 +117,71 @@ Departments
    | D11        | Hyderabad  |
 
 
+#### 4. 4NF
+##### Key traits
+1. Should conform to 3NF
+2. Should not have multi-valued dependency
 
-4. 4NF
+Conditions that create the issue for 4NF are
+- More than one value depend on one key i.e. in the table we can see *EmpNo* is one key, but has multiple values i.e. "Project" and "Hobby" (primary or composite)
+- Each value is independent of each other i.e. there is no relation between "Project" and "Hobby" attributes, but these columns depend on *Empno*
+
+Lets look at our example
+<img src="../Normalization/Normalization-4nf-table.png">
+
+Lets try to join each employee with department number using the following table 
+
+*emp_dept*
+   | Empno    | Dept_no   |
+   | :---     |  ----:    | 
+   | 1        | 10        |
+
+The SQL query would look like 
+```SQL
+select a.empno, a.project, b.dept_no from emp_project a join emp_dept b
+       on a.empno = b.empno;
+```
+
+My output in this scenario have two set of duplicates
+ 
+   | Empno    | Project |   Dept_no |       |
+   | :---     | :----:  |  :----:   | ----: |
+   | 1        | P1      |   10      | *Duplicate set1* |
+   | 1        | P2      |   10      | *Duplicate set1* | 
+   | 1        | P1      |   10      | *Duplicate set2* | 
+   | 1        | P2      |   10      | *Duplicate set2* |
+
+
+Lets try to fix this by decoupling the values from original table.
+
+Employee_project
+*projects*
+   | Empno    | Project   |
+   | :---     |  ----:    | 
+   | 1        | P1        |
+   | 1        | P2        |
+
+Employee_hobby
+*hobbies*
+   | Empno    | Hobby     |
+   | :---     |  ----:    | 
+   | 1        | Swimming  |
+   | 1        | Cycling   |
+
+Now, lets see if we write our query to get the value using SQL, what does it look like
+
+```SQL
+select a.empno, a.project, b.dept_no from projects a join emp_dept b
+       on a.empno = b.empno;
+```
+
+This is the result we should expect
+   | Empno    | Project |   Dept_no |
+   | :---     | :----:  |   ----:   |
+   | 1        | P1      |   10      |
+   | 1        | P2      |   10      | 
+
+
 5. 5NF
 
 
