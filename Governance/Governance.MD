@@ -24,4 +24,5 @@ flowchart LR
 A[Data Owner] -->|Delegates| B(Data Stewards)
 B(Data Stewards) --> |Alias| C(Data Controllers)
 C(Data Controllers) --> |Represent| D(Data Processors)
+C(Data Controllers) --> |Retailers| --> |CreditCardServices ==> (Data Controllers)
 ```
