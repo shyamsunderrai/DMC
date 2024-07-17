@@ -15,12 +15,12 @@ graph TD;
     Data_Stewards_1-->|DataEnablers|-->Data_Controllers_x1;
     Data_Stewards_2-->|DataEnablers|-->Data_Controllers_a1;
     Data_Stewards_n-->|DataEnablers|-->Data_Controllers_e1;
-
 ```
 
 
-flowchart LR
+
 ```mermaid
+flowchart LR
 A[Hard] -->|Text| B(Round)
 B --> C{Decision}
 C -->|One| D[Result 1]
