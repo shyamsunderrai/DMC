@@ -21,8 +21,7 @@ graph TD;
 
 ```mermaid
 flowchart LR
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
+A[Data Owner] -->|Delegates| B(Data Stewards)
+B(Data Stewards) --> |Alias| C(Data Controllers)
+C(Data Controllers) --> |Represent| D(Data Processors)
 ```
