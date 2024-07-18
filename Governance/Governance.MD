@@ -42,31 +42,78 @@ graph TD
 4. Regulatory Compliance 
 
 
-```mermaid
-graph TD
-    A[Data Stewards]
-    A --> B[Responsibilities]
+<details>
+    <summary>Data Stewards</summary>
+    <pre>
+    ```mermaid
+    graph TD
+        B[Responsibilities]
 
-    subgraph Quality_Security_Privacy_Compliance
-        B --> C[Data Quality]
-        B --> D[Data Security]
-        B --> L[Data Privacy]
-        B --> M[Regulatory Compliance]
-    end
+        subgraph Quality_Security_Privacy_Compliance
+            B --> C[Data Quality]
+            B --> D[Data Security]
+            B --> L[Data Privacy]
+            B --> M[Regulatory Compliance]
+        end
+    ```
+    </pre>
+</details>
 
-    subgraph Data_Quality_Details
-        C --> E[Monitoring data completeness]
-        C --> F[Monitoring accuracy]
-        C --> G[Validating data on ongoing basis]
-        C --> H[Promoting data reuse]
-    end
+<details>
+    <summary>Data Quality</summary>
+    <pre>
+    ```mermaid
+    graph TD
+        C[Data Quality]
 
-    subgraph Data_Security_Details
-        D --> I[Data Access Controls]
-        D --> J[Third-party Access]
-        D --> K[Release approvals]
-    end
-```
+        subgraph Data_Quality_Details
+            C --> E[Monitoring data completeness]
+            C --> F[Monitoring accuracy]
+            C --> G[Validating data on ongoing basis]
+            C --> H[Promoting data reuse]
+        end
+    ```
+    </pre>
+</details>
+
+<details>
+    <summary>Data Security</summary>
+    <pre>
+    ```mermaid
+    graph TD
+        D[Data Security]
+
+        subgraph Data_Security_Details
+            D --> I[Data Access Controls]
+            D --> J[Third-party Access]
+            D --> K[Release approvals]
+        end
+    ```
+    </pre>
+</details>
+
+<details>
+    <summary>Data Privacy</summary>
+    <pre>
+    ```mermaid
+    graph TD
+        L[Data Privacy]
+        <!-- Add details here if needed -->
+    ```
+    </pre>
+</details>
+
+<details>
+    <summary>Regulatory Compliance</summary>
+    <pre>
+    ```mermaid
+    graph TD
+        M[Regulatory Compliance]
+        <!-- Add details here if needed -->
+    ```
+    </pre>
+</details>
+
 
 
 
