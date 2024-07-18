@@ -19,6 +19,39 @@ C(Data Controllers) --> |Retailer And CreditCardServiceProvider | E(Data Process
 There are three key strcutures from the perspective of Data Governance.
 
 ```mermaid
-stateDiagram-v2
-Data-Owner --> Data=Stewards --> Data-Custodians
+graph LR
+subgraph A
+    A[Apex]
+end
+subgraph B
+    B1[Level 1]
+    B2[Level 1]
+end
+subgraph C
+    C1[Level 2]
+    C2[Level 2]
+    C3[Level 2]
+end
+subgraph D
+    D1[Level 3]
+    D2[Level 3]
+    D3[Level 3]
+    D4[Level 3]
+end
+A --> B1
+A --> B2
+B1 --> C1
+B1 --> C2
+B2 --> C2
+B2 --> C3
+C1 --> D1
+C1 --> D2
+C2 --> D2
+C2 --> D3
+C3 --> D4
+C3 --> D4
+```
+
+
+
 ```
