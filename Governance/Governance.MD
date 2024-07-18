@@ -46,17 +46,26 @@ graph TD
 graph TD
     A[Data Stewards]
     A --> B[Responsibilities]
-    B --> C[Data Quality]
-    B --> D[Data Security]
-    B --> L[Data Privacy]
-    B --> M[Regulatory Compliance]
-    C --> E[Monitoring data completeness]
-    C --> F[Monitoring accuracy]
-    C --> G[Validating data on ongoing basis]
-    C --> H[Promoting data reuse]
-    D --> I[Data Access Controls]
-    D --> J[Third-party Access]
-    D --> K[Release approvals]   
+
+    subgraph Quality_Security_Privacy_Compliance
+        B --> C[Data Quality]
+        B --> D[Data Security]
+        B --> L[Data Privacy]
+        B --> M[Regulatory Compliance]
+    end
+
+    subgraph Data_Quality_Details
+        C --> E[Monitoring data completeness]
+        C --> F[Monitoring accuracy]
+        C --> G[Validating data on ongoing basis]
+        C --> H[Promoting data reuse]
+    end
+
+    subgraph Data_Security_Details
+        D --> I[Data Access Controls]
+        D --> J[Third-party Access]
+        D --> K[Release approvals]
+    end
 ```
 
 
