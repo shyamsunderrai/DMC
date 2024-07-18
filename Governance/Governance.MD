@@ -26,3 +26,36 @@ graph TD
     A --> B
     B --> C
 ```
+
+## Traits of a good Data Steward
+1. Good relationship with all the departments 
+2. Great collaboration between different teams/orgs
+3. Respected members to make tough calls on agreements about data access
+4. Have SME functional knowledge about the data and its practices
+5. Thorough understanding of data governance
+
+
+## Responsibilities
+1. Data Quality - Access to Data and its management requires clear data definitions, monitoring data completeness, monitoring accuracy, validating data on ongoing basis, promoting data reuse 
+2. Data Security
+3. Data Privacy
+4. Regulatory Compliance 
+
+
+```mermaid
+graph TD
+    A[Data Stewards]
+    A --> B[Responsibilities]
+    B --> C[Data Quality]
+    B --> D[Data Security]
+    C --> E[Access to Data and its management requires clear data definitions]
+    C --> F[Monitoring data completeness]
+    C --> G[Monitoring accuracy]
+    C --> H[Validating data on ongoing basis]
+    C --> I[Promoting data reuse]
+```
+
+
+
+
+
