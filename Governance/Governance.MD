@@ -13,6 +13,12 @@ flowchart LR
 A[Data Owner] -->|Delegates| B(Data Stewards)
 B(Data Stewards) --> |Alias| C(Data Controllers)
 C(Data Controllers) --> |Represent| D(Data Processors)
-C(Data Controllers) --> |Retailer And CreditCardServiceProvider | E(Data Controllers)
+C(Data Controllers) --> |Retailer And CreditCardServiceProvider | E(Data Processors)
 ```
 
+There are three key strcutures from the perspective of Data Governance.
+
+```mermaid
+stateDiagram-v2
+Data-Owner --> Data=Stewards --> Data-Custodians
+```
