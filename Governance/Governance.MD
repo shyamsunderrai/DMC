@@ -44,76 +44,63 @@ graph TD
 
 <details>
     <summary>Data Stewards</summary>
-    <pre>
-    ```mermaid
-    graph TD
-        B[Responsibilities]
-
-        subgraph Quality_Security_Privacy_Compliance
-            B --> C[Data Quality]
-            B --> D[Data Security]
-            B --> L[Data Privacy]
-            B --> M[Regulatory Compliance]
-        end
-    ```
-    </pre>
+    <ul>
+        <li>Responsibilities
+            <ul>
+                <li>Data Quality
+                    <ul>
+                        <li>Monitoring data completeness</li>
+                        <li>Monitoring accuracy</li>
+                        <li>Validating data on ongoing basis</li>
+                        <li>Promoting data reuse</li>
+                    </ul>
+                </li>
+                <li>Data Security
+                    <ul>
+                        <li>Data Access Controls</li>
+                        <li>Third-party Access</li>
+                        <li>Release approvals</li>
+                    </ul>
+                </li>
+                <li>Data Privacy</li>
+                <li>Regulatory Compliance</li>
+            </ul>
+        </li>
+    </ul>
 </details>
 
 <details>
     <summary>Data Quality</summary>
-    <pre>
-    ```mermaid
-    graph TD
-        C[Data Quality]
-
-        subgraph Data_Quality_Details
-            C --> E[Monitoring data completeness]
-            C --> F[Monitoring accuracy]
-            C --> G[Validating data on ongoing basis]
-            C --> H[Promoting data reuse]
-        end
-    ```
-    </pre>
+    <ul>
+        <li>Monitoring data completeness</li>
+        <li>Monitoring accuracy</li>
+        <li>Validating data on ongoing basis</li>
+        <li>Promoting data reuse</li>
+    </ul>
 </details>
 
 <details>
     <summary>Data Security</summary>
-    <pre>
-    ```mermaid
-    graph TD
-        D[Data Security]
-
-        subgraph Data_Security_Details
-            D --> I[Data Access Controls]
-            D --> J[Third-party Access]
-            D --> K[Release approvals]
-        end
-    ```
-    </pre>
+    <ul>
+        <li>Data Access Controls</li>
+        <li>Third-party Access</li>
+        <li>Release approvals</li>
+    </ul>
 </details>
 
 <details>
     <summary>Data Privacy</summary>
-    <pre>
-    ```mermaid
-    graph TD
-        L[Data Privacy]
-        <!-- Add details here if needed -->
-    ```
-    </pre>
+    <ul>
+        <li>Details about Data Privacy</li>
+    </ul>
 </details>
 
 <details>
     <summary>Regulatory Compliance</summary>
-    <pre>
-    ```mermaid
-    graph TD
-        M[Regulatory Compliance]
-        <!-- Add details here if needed -->
-    ```
-    </pre>
+    <ul>
+        <li>Details about Regulatory Compliance</li>
+    </ul>
 </details>
-
 
 
 
