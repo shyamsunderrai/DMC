@@ -48,11 +48,10 @@ graph TD
     A --> B[Responsibilities]
     B --> C[Data Quality]
     B --> D[Data Security]
-    C --> E[Access to Data and its management requires clear data definitions]
-    C --> F[Monitoring data completeness]
-    C --> G[Monitoring accuracy]
-    C --> H[Validating data on ongoing basis]
-    C --> I[Promoting data reuse]
+    C --> E[Monitoring data completeness]
+    C --> F[Monitoring accuracy]
+    C --> G[Validating data on ongoing basis]
+    C --> H[Promoting data reuse]
 ```
 
 
