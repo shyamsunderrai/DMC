@@ -42,7 +42,8 @@ graph TD
 4. Regulatory Compliance 
 
 
-```mermaidgraph TD
+```mermaid
+graph TD
     A[Data Stewards]
     A --> B[Responsibilities]
     B --> C[Data Quality]
