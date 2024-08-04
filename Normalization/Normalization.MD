@@ -70,8 +70,9 @@ Lets look at an example
 In this example, we can see that EMP(1) + Project(P1) constitute a composite key, as they are unique when combined. Same goes for all the values within these two columns. And, column ProjectName depends on these columns. This is against 2NF, hence, this should be restructured and corrected or Normalized into two entities. 
 
 *Employee*
+
    | Emp No    | Project   | Allocation |
-   | :---      |  :----:   | ---- :     | 
+   | :---      |  :----:   | ----:      | 
    | 1         | P1        | 100        |
    | 2         | P2        |  25        |
    | 2         | P3        |  75        |
