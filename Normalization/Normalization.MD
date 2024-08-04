@@ -183,6 +183,51 @@ This is the result we should expect
    | 1        | P2      |   10      | 
 
 
-5. 5NF
+#### 5. 5NF   
+##### Key traits
+1. Should conform to 4NF
+2. Should not have *joined dependency*
+
+
+  | Empno | Project | Language |
+  | :---  |  :---:  |     ---: |
+  | 1     |  P1     | C        |
+  | 2     |  P2     | C++      |
+  | 1     |  P1     | Java     |
+  | 3     |  P3     | VB       |
+ 
+
+When more than one value depend on unique or composite key(s). In the above example, Project and Language depend on Employee Number (Empno) and Language and Project also depend on each other. 
+
+In order to resolve this, the tables have to be broken down to isolate the dependencies
+
+
+*Employee_Project*
+  | Empno | Project |
+  | :---  |  ---:   |
+  | 1     |  P1     |
+  | 2     |  P2     |
+  | 3     |  P3     |
+
+
+*Project_Lanugage*
+  | Project | Language |
+  | :---    |  ---:    |
+  | P1      |  C       |
+  | P1      |  Java    |
+  | P2      |  C++     |
+  | P3      |  VB      |
+
+
+*Employee_Language*
+  | Empno | Language|
+  | :---  |  ---:   |
+  | 1     |  C      |
+  | 1     |  Java   |
+  | 2     |  C++    |
+  | 3     |  VB     |
+
+
+
 
 
