@@ -62,7 +62,7 @@ erDiagram
     EMPLOYEE ||--|| ROLE_ASSIGNMENT : assigned_to
     ROLE ||--o{ ROLE_ASSIGNMENT : contains
     EMPLOYEE ||--o{ PROJECT_ASSIGNMENT : works_on
-    PROJECT ||--o{ PROJECT_ASSIGNMENT : involves
+    PROJECT ||---{ PROJECT_ASSIGNMENT : involves
 
     DEPARTMENT {
       int id
